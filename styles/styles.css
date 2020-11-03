@@ -120,7 +120,75 @@ main section:nth-child(even) .container {background: var(--yellow);}
 }
 
 
-
+ /* - skills - */
+.page.skills {
+    background: var(--green);
+    min-height: 100px;
+}
+.page.skills p[marked] {
+    width: 7.3em; 
+    color: var(--white);
+}
+.page.skills p.heading-large[marked]::after {
+    filter: brightness(130%);
+}
+.page.skills .progress-wrapper {
+    --gap: 200px;
+    
+    width: calc((100% - var(--gap)) / 2);
+    height: 5px;
+    display: inline-block;
+    margin-bottom: 50px;
+    background: #4DCDB4;
+}
+.page.skills .progress-wrapper:nth-child(even) {margin-right: var(--gap);}
+.page.skills .progress-wrapper .progress-state {
+    /* width: attr(data-width %); */
+    height: 5px;
+    background: var(--white);
+}
+.page.skills .progress-wrapper .progress-state[data-state = "97"] {
+    width: 97%;
+}
+.page.skills .progress-wrapper .progress-state[data-state = "92"] {
+    width: 92%;
+}
+.page.skills .progress-wrapper .progress-state[data-state = "90"] {
+    width: 90%;
+}
+.page.skills .progress-wrapper .progress-state[data-state = "85"] {
+    width: 85%;
+}
+.page.skills .progress-wrapper .progress-state[data-state = "72"] {
+    width: 72%;
+}
+.page.skills .progress-wrapper .handler {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    border-radius: 12px;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    position: relative;
+    top: -4px;
+    background: var(--white);
+}
+.page.skills .progress-wrapper .handler::before {
+    content: attr(data-state)"%";
+    position: relative;
+    top: -30px;
+    font-size: 1.3em;
+    color: var(--white);
+}
+.page.skills .progress-state::before {
+    content: attr(data-descr);
+    position: relative;
+    top: -30px;
+    font-size: 1.3em;
+    color: var(--white);
+    float: left;
+}
 
 
 
