@@ -7,10 +7,9 @@
     --d-white: #F5F6FB;
     --l-grey: #7A7A7A;
     --grey: #323232;
-    --yellow: #F9CA24;
     --red: #FF7675;
     --green: #00B894;
-    --purple: #BE2EDD;
+    --l-green: #00CCA3;
     
     /* fonts */
     --font-size: 10px;
@@ -19,7 +18,7 @@
     --font-light: 300;
     
     /* content width */
-    --width-normal: 80%;  /* set to 80% for adaptivity */
+    --width-normal: 80%;  /* set to 80% for adaptivity | to 1200px for normal size */
     --width-wide: 1500px;
     --width-narrow: 800px;
     --width-mobile: 400px;

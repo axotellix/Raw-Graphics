@@ -1,10 +1,14 @@
 
 /* [ GENERAL ] */
 
-/* 0. Fonts ---------------- */
+/* 0.1. Fonts ---------------- */
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+/* 0.2. Body ---------------- */
+body {
+    overflow-x: hidden;
 }
 
 /* 1. Sections ---------------- */
@@ -76,10 +80,18 @@ p.heading-large[centered] {
     width: 150px;
     height: 40px;
     line-height: 40px;
-    background: var(--green);
+    background-color: var(--green);
     text-align: center;
     font-size: 1.4em;
     color: var(--white);
+    transition: background-color 0.25s;
+}
+.CTA:hover {
+    background-color: var(--l-green) !important;
+    color: var(--white) !important;
+}
+.CTA:active {
+    background-color: var(--d-green) !important;
 }
 
 /* 4. Attributes ---------------- */
@@ -99,6 +111,15 @@ form * {
 form textarea, input:not([type = "submit"]) { padding: 10px; border: 2px solid rgba(0, 0, 0, .1); }
 form textarea                 { resize: none; }
 form [type = "submit"]        { cursor: pointer; }
+
+/* 6. "a" tags ---------------- */
+a { transition: color 0.25s; }
+a:hover {
+    color: var(--green) !important;
+}
+a:active {
+    color: var(--d-green) !important;
+}
 
 
 
