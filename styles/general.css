@@ -17,7 +17,6 @@ main section .container {
     width: var(--width);
     height: var(--height);
     margin: 0 auto;
-    //background: Orange;
 }
 
 /* 2. p tags ---------------- */
@@ -66,7 +65,7 @@ p.heading-large[centered] {
 }
 
 /* 3. CTA buttons ---------------- */
-a.CTA {
+.CTA {
     display: inline-block;
     width: 150px;
     height: 40px;
@@ -84,3 +83,17 @@ a.CTA {
 [no-margin = "right"]    {margin-right:   0 !important;}
 
 [active-tab]             {color: var(--green) !important}
+
+/* 5. Forms ---------------- */
+form * {
+    border: none;
+    outline: none;
+    font-size: 1.4em;
+}
+form *:not([type = "submit"]) { padding: 10px; border: 2px solid rgba(0, 0, 0, .1); }
+form textarea                 { resize: none; }
+form [type = "submit"]        { cursor: pointer; }
+
+
+
+
