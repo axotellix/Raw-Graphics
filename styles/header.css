@@ -1,65 +1,106 @@
+
 /* [ HEADER ] */
 
-header {
-    background: var(--grey);
+header {   
     width: 100%;
-    height: 300px;
-    position: relative;
-}
-
-header div#navbar {
-    background: var(--l-grey);
-    display: block;
-    position: absolute;
-    width: 120px;
-    height: 70px;
-    padding-right: 10px;
-    left: 0px;
-    top: 50%;
-    margin-top: -35px;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    background-image: url(../imgs/menu.png);
+    height: var(--height);
+    margin: 0 auto;
+    background-color: var(--white);
+    background-image: url("../imgs/Back.png");
     background-repeat: no-repeat;
-    background-size: 35%;
-    background-position: 80%;
-    transition: filter 0.25s;
+    background-size: contain;
 }
 
-header div#navbar:hover {
-    filter: brightness(120%);
+/* - navigation panel - */
+
+header nav {
+    position: relative;
+    width: var(--width);
+    height: 40px;
+    margin: 0 auto;
+    top: 30px;
 }
 
-header div#navbar:active {
-    background-size: 37% 39%;
-    background-position: 81%;
-    filter: brightness(110%);
-}
+header nav a.logo {float: left; width: 150px; height: 34px; position: relative; bottom: -3px;}
+header nav a.logo img {width: 150px; height: 34px;}
 
-
-header p {
+header nav ul {
     display: inline-block;
-    text-align: right;
-    position: absolute;
-    color: var(--d-white);
-    font-size: 3.2em;
-    top: 60px;
-    right: 100px;
-    line-height: 0.8em;
-    font-weight: var(--font-bold);
-    z-index: 1;
+    float: right;
+    margin: 0;
+    height: 40px;
 }
+header nav ul li {
+    display: inline-block;
+    margin-left: 15px;
+    height: 40px;
+    line-height: 40px; 
+}
+header nav ul li a {margin-top: 0 !important; color: var(--grey); font-size: 1.4em;}
 
-header p span {
+
+/* clering floats */
+/*  -- doesn`t work
+header nav::after {
+    content: '';
     display: block;
-    font-size: 0.42em;
-    font-weight: var(--font-normal);
+    clear: both;
+}
+*/
+
+
+/* - content block - */
+
+header .header-cont {
+    width: var(--width);
+    height: 300px;
+    top: 120px;
+    position: relative;
+    margin: 0 auto;
 }
 
-header img {
-    position: absolute;
-    right: 110px;
-    top: 5%;
-    height: 90%;
-    opacity: 0.15;
+ /* -- p tags -- */
+header .header-cont p {margin: 0;}
+
+header .header-cont p.heading-small {
+    font-size: 2.8em;
+    margin-bottom: 10px;
 }
+header .header-cont p.heading-large {
+    font-size: 4.8em;
+    font-weight: var(--font-bold);
+    margin-bottom: 30px;
+}
+header .header-cont p.text-small {
+    font-size: 1.5em;
+}
+
+ /* -- CTA buttons -- */
+header a.CTA {margin-top: 30px;}
+header a.CTA-about-me {
+    margin-right: 15px;
+}
+header a.CTA-dwnld-cv {
+    background: var(--grey);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
