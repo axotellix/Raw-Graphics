@@ -30,8 +30,8 @@ main section .container {
 }
 
 /* 2. p tags ---------------- */
-p         { margin: 0; }
-p text    { color: var(--green); }
+p               { margin: 0; }
+p span.green    { color: var(--green); }
 
 p.heading-small {
     font-size: 2em;
