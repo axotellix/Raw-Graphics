@@ -416,6 +416,17 @@ body {
 }
 
 
+ /* - about us - */
+.page.partners { min-height: 100px; padding-top: 0; }
+.page.partners .partners-imgs li {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% / 5);
+    margin: 0;
+}
+
+
 /* -------------------------------------- */
 
 /* [ MEDIA QUERIES ] */
