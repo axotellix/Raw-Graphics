@@ -12,83 +12,10 @@ body {
     color: var(--grey);
 }
 
- /* - general - */
-
-/* 1. p tags ---------------- */
-p         { margin: 0; }
-p text    { color: var(--green); }
-
-p.heading-small {
-    font-size: 2em;
-}
-p.heading-large {
-    font-size: 3em;
-    font-weight: var(--font-bold);
-    line-height: 1.2em;
-    display: inline-block;
-}
-p.text-small {
-    font-size: 1.4em;
-    color: var(--l-grey);
-    margin-top: 30px;
-}
-p.heading-small[marked]::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 2px;
-    background: var(--green);
-    position: relative;
-    bottom: -10px;
-    margin-bottom: 30px;
-}
-p.heading-large[marked]::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 10px;
-    background: var(--green);
-    position: relative;
-    bottom: 0.35em;
-    opacity: 0.2;
-}
-
-/* 2. CTA buttons ---------------- */
-a.CTA {
-    display: inline-block;
-    width: 150px;
-    height: 40px;
-    line-height: 40px;
-    background: var(--green);
-    text-align: center;
-    font-size: 1.4em;
-    color: var(--white);
-}
-
- /* - /general - */
-
- /* - sections - */
-
-main, main section {
-    width: 100%;
-}
-
-main section {
-    height: var(--height);
-}
-main section .container {
-    --height: 100%;
-    
-    width: var(--width);
-    height: var(--height);
-    padding-top: var(--padding);
-    margin: 0 auto;
-    //background: Orange;
-}
 main section:nth-child(even) .container {background: var(--yellow);}
 
- /* -- about us -- */
- /* --- text block --- */
+ /* - about us - */
+ /* -- text block -- */
 .page.about .info-text, .page.about .info-graphics {
     display: inline-block;
     height: 100%;
@@ -101,7 +28,7 @@ main section:nth-child(even) .container {background: var(--yellow);}
     width: 350px;
     float: right;
 }
- /* --- circles block --- */
+ /* -- circles block -- */
 .page.about .circle {
     width: 150px;
     height: 150px;
@@ -134,6 +61,65 @@ main section:nth-child(even) .container {background: var(--yellow);}
     margin-top: 40px;
     font-weight: var(--font-bold);
 }
+
+ /* - provided services - */
+.page.services {background: var(--d-white);}
+.page.services .container {background: transparent !important;}  /* <- delete when remove back colors */
+.page.services .service-card {
+    --gap: 20px;
+    --pad: 50px;
+    
+    width: calc((100% - var(--gap) * 2) / 3);
+    height: auto;
+    display: inline-block;
+    background: var(--white);
+    padding: var(--pad);
+    margin: 0;
+    
+}
+  /* ( background-images for cards )  [start]*/
+.page.services .service-card {
+    --icon-size: 50px; 
+    background-repeat: no-repeat;
+    background-position: var(--pad) var(--pad);
+    background-size: var(--icon-size);
+}
+.page.services .service-card.graphic {
+    background-image: url("../imgs/icons/graphic.png"); 
+}
+.page.services .service-card.seo {
+    background-image: url("../imgs/icons/seo.png"); 
+}
+.page.services .service-card.data {
+    background-image: url("../imgs/icons/data.png"); 
+}
+.page.services .service-card.digital {
+    background-image: url("../imgs/icons/digital.png"); 
+}
+.page.services .service-card.video {
+    background-image: url("../imgs/icons/video.png"); 
+}
+.page.services .service-card.photo {
+    background-image: url("../imgs/icons/photo.png"); 
+}
+  /* ( background-images for cards )  [end]  */
+.page.services .service-card:nth-child(3n+1) {
+    margin-left: var(--gap);
+    margin-right: var(--gap);
+    margin-top: var(--gap);
+}
+.page.services .service-card.seo {  /* QUESTION: ".page.services .service-card.nth-child(2)" - doesn`t work */
+    margin-top: 0;
+}
+.page.services .container > p.heading-large {
+    width: 12.5em;
+}
+.page.services .service-card p.heading-large {
+    font-size: 1.5em;
+    margin-top: 70px;
+}
+
+
 
 
 

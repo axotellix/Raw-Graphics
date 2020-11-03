@@ -1,0 +1,79 @@
+
+/* [ GENERAL ] */
+
+/* 1. Sections ---------------- */
+main, main section {
+    width: 100%;
+}
+
+main section {
+    height: auto;
+    min-height: var(--height);
+    padding: var(--padding) 0;
+}
+main section .container {
+    --height: 100%;
+    
+    width: var(--width);
+    height: var(--height);
+    margin: 0 auto;
+    //background: Orange;
+}
+
+/* 2. p tags ---------------- */
+p         { margin: 0; }
+p text    { color: var(--green); }
+
+p.heading-small {
+    font-size: 2em;
+}
+p.heading-large {
+    font-size: 3em;
+    font-weight: var(--font-bold);
+    line-height: 1.2em;
+    display: inline-block;
+}
+p.text-small {
+    font-size: 1.4em;
+    color: var(--l-grey);
+    margin-top: 30px;
+}
+p.heading-small[marked]::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--green);
+    position: relative;
+    bottom: -10px;
+    margin-bottom: 30px;
+}
+p.heading-large[marked]::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: var(--green);
+    position: relative;
+    bottom: 0.35em;
+    opacity: 0.2;
+}
+p.heading-large[centered] {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+/* 3. CTA buttons ---------------- */
+a.CTA {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    background: var(--green);
+    text-align: center;
+    font-size: 1.4em;
+    color: var(--white);
+}
+
