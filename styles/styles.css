@@ -253,6 +253,71 @@ main section:nth-child(even) .container {background: var(--yellow);}
  .page.projects .project-card p.project-rating {
     margin-top: 40px;
 }
+
+
+/* - clients - */
+.page.feedback {
+    background: var(--white); 
+}
+.page.feedback p[marked] {
+    width: 8.5em; 
+}
+.page.feedback .feedback-card {
+    --gap: 100px;
+    --pad: 40px;
+    
+    width: calc((100% - var(--gap)) / 2);
+    height: auto;
+    padding: var(--pad);
+    display: inline-block;
+    background: var(--white);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+.page.feedback .feedback-card p {color: var(--l-grey);}
+.page.feedback .feedback-card:nth-child(even) {margin-right: var(--gap);}
+.page.feedback .feedback-card .feedback-text, 
+ .page.feedback .feedback-card .feedback-author {
+    height: auto;
+    padding-bottom: var(--pad);
+}
+.page.feedback .feedback-card .feedback-text p::before {
+    content: '';
+    background-image: url("../imgs/icons/quotes.png");
+    background-repeat: no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+     
+}
+.page.feedback .feedback-author div {
+    display: inline-block;
+    height: 70px;
+    overflow: hidden;
+}
+.page.feedback .feedback-author .author-ava {
+    width: 70px; 
+    border-radius: 70px; 
+    margin-right: 15px;
+    background: var(--l-grey);
+}
+.page.feedback .feedback-author .author-sign {width: 100px;}
+.page.feedback .feedback-author .author-sign img {
+    margin-top: 25px;
+}
+.page.feedback .feedback-author .author-about {width: calc(100% - 185px);}
+  /* ^ ( width: 100% - [other blocks` widths] - [ava`s margin-right] ) */
+.page.feedback .feedback-author .author-about p.author-name {
+    font-size: 2em;
+    font-weight: var(--font-bold);
+    margin-top: 10px;
+}
+.page.feedback .feedback-author .author-about p.author-position {font-size: 1.4em;}
+
+
+
+
 /* -------------------------------------- */
 
 /* [ MEDIA QUERIES ] */
