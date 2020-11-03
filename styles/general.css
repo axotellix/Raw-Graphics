@@ -107,10 +107,14 @@ form * {
     border: none;
     outline: none;
     font-size: 1.4em;
+    transition: border 0.25s;
 }
 form textarea, input:not([type = "submit"]) { padding: 10px; border: 2px solid rgba(0, 0, 0, .1); }
 form textarea                 { resize: none; }
 form [type = "submit"]        { cursor: pointer; }
+form input:focus, form textarea:focus { border: 2px solid rgba(0, 0, 0, .2); }
+    
+}
 
 /* 6. "a" tags ---------------- */
 a { transition: color 0.25s; }

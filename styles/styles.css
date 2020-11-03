@@ -232,6 +232,21 @@ body {
 }
 .page.projects .project-card[empty] {
     background: var(--l-grey);
+    background: url("../imgs/art.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0;
+}
+.page.projects .project-card[empty] .coming-soon {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+}
+.page.projects .project-card[empty] .coming-soon p {
+    margin-top: 32%;
+    margin-left: 12%;
+    color: var(--l-grey);
 }
 .page.projects .project-card p {
     text-align: center;
@@ -304,6 +319,12 @@ body {
     border-radius: 70px; 
     margin-right: 15px;
     background: var(--l-grey);
+    overflow: hidden;
+    text-align: center;
+}
+.page.feedback .feedback-author .author-ava img {
+    width: 70px; 
+    height: 70px;
 }
 .page.feedback .feedback-author .author-sign {width: 100px;}
 .page.feedback .feedback-author .author-sign img {
@@ -334,7 +355,11 @@ body {
 }
 .page.contact .background-image { 
     margin-right: var(--gap);
-    background: var(--l-grey);
+    background-color: var(--l-grey);
+    background-image: url("../imgs/desert.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .page.contact .contact-form { 
     padding: var(--pad);
@@ -382,6 +407,12 @@ body {
     height: 200px;
     background: var(--l-grey);
     margin-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+.page.news article .news-img img {
+    height: 115%;
+    width: auto;
 }
 .page.news article .news-about, 
  .page.news article .news-short-text,
