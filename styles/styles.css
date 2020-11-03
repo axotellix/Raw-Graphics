@@ -19,15 +19,38 @@ p         { margin: 0; }
 p text    { color: var(--green); }
 
 p.heading-small {
-    font-size: 2.8em;
+    font-size: 2em;
 }
 p.heading-large {
-    font-size: 4.8em;
+    font-size: 3em;
     font-weight: var(--font-bold);
+    line-height: 1.2em;
+    display: inline-block;
 }
 p.text-small {
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: var(--l-grey);
+    margin-top: 30px;
+}
+p.heading-small[marked]::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--green);
+    position: relative;
+    bottom: -10px;
+    margin-bottom: 30px;
+}
+p.heading-large[marked]::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: var(--green);
+    position: relative;
+    bottom: 0.35em;
+    opacity: 0.2;
 }
 
 /* 2. CTA buttons ---------------- */
@@ -44,6 +67,8 @@ a.CTA {
 
  /* - /general - */
 
+ /* - sections - */
+
 main, main section {
     width: 100%;
 }
@@ -58,9 +83,61 @@ main section .container {
     height: var(--height);
     padding-top: var(--padding);
     margin: 0 auto;
-    background: Orange;
+    //background: Orange;
 }
 main section:nth-child(even) .container {background: var(--yellow);}
+
+ /* -- about us -- */
+ /* --- text block --- */
+.page.about .info-text, .page.about .info-graphics {
+    display: inline-block;
+    height: 100%;
+}
+.page.about .info-text {
+    width: calc(100% - 450px);
+    float: left;
+}
+.page.about .info-graphics {
+    width: 350px;
+    float: right;
+}
+ /* --- circles block --- */
+.page.about .circle {
+    width: 150px;
+    height: 150px;
+    background: Orange;
+    border-radius: 100px;
+    display: inline-block;
+}
+.page.about .circle:nth-child(1) {
+    background: #AC67D7;
+}
+.page.about .circle:nth-child(2) {
+    position: relative;
+    left: -10px;
+    background: #5460A9;
+}
+.page.about .circle:nth-child(3) {
+    position: relative;
+    bottom: 50px;
+    left: 75px;
+    background: Orange;
+}
+.page.about .circle p {
+    font-size: 1.4em;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--white);
+}
+.page.about .circle p.heading {
+    font-size: 3em;
+    margin-top: 40px;
+    font-weight: var(--font-bold);
+}
+
+
+
+
 /* -------------------------------------- */
 
 /* [ MEDIA QUERIES ] */
