@@ -77,3 +77,10 @@ a.CTA {
     color: var(--white);
 }
 
+/* 4. Attributes ---------------- */
+[no-margin = "top"]      {margin-top:     0 !important;}
+[no-margin = "bottom"]   {margin-bottom:  0 !important;}
+[no-margin = "left"]     {margin-left:    0 !important;}
+[no-margin = "right"]    {margin-right:   0 !important;}
+
+[active-tab]             {color: var(--green) !important}

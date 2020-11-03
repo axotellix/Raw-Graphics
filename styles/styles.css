@@ -108,9 +108,11 @@ main section:nth-child(even) .container {background: var(--yellow);}
     margin-right: var(--gap);
     margin-top: var(--gap);
 }
-.page.services .service-card.seo {  /* QUESTION: ".page.services .service-card.nth-child(2)" - doesn`t work */
-    margin-top: 0;
+/*
+.page.services .service-card.seo {   QUESTION: ".page.services .service-card.nth-child(2)" - doesn`t work 
+    margin-top: 0;                              if 2 "nth-child()" selectors applied
 }
+*/
 .page.services .container > p.heading-large {
     width: 12.5em;
 }
@@ -191,7 +193,66 @@ main section:nth-child(even) .container {background: var(--yellow);}
 }
 
 
-
+ /* - latest projects - */
+.page.projects .container {background: transparent !important;}  /* <- delete when remove back colors */
+.page.projects ul.categories {
+    padding: 0;
+    margin-bottom: 50px;
+}
+.page.projects .categories li {
+    font-size: 1.5em;
+    display: inline-block;
+    margin-right: 30px;
+    list-style: none;
+    cursor: pointer;
+    color: var(--l-grey);
+}
+.page.projects .project-card {
+    --gap: 30px;
+    --pad: 50px;
+    
+    width: calc((100% - var(--gap) * 2) / 3);
+/*
+    height: auto;
+    min-height: 300px;
+*/
+    height: 320px;
+    background: var(--red);
+    display: inline-block;
+    padding: var(--pad);
+    overflow: hidden;
+}
+.page.projects .project-card:nth-child(3n+1) {
+    margin-left: var(--gap);
+    margin-right: var(--gap);
+    margin-top: var(--gap);
+}
+.page.projects .project-card[empty] {
+    background: var(--l-grey);
+}
+.page.projects .project-card p {
+    text-align: center;
+    color: var(--white);
+}
+.page.projects .project-card p.text-small {
+    margin-top: 5px;
+}
+.page.projects .project-card p.project-description {font-size: 1.3em; line-height: 1.5em;}
+.page.projects .project-card p.project-rating::after {
+    font-size: 1.5em;
+    vertical-align: baseline;
+}
+  /* (set number of stars due to rate)  [start]*/
+.page.projects .project-card p.project-rating[data-rate = "1"]::after {content: ' \2605';}
+.page.projects .project-card p.project-rating[data-rate = "2"]::after {content: ' \2605\2605';}
+.page.projects .project-card p.project-rating[data-rate = "3"]::after {content: ' \2605\2605\2605';}
+.page.projects .project-card p.project-rating[data-rate = "4"]::after {content: ' \2605\2605\2605\2605';}
+.page.projects .project-card p.project-rating[data-rate = "5"]::after {content: ' \2605\2605\2605\2605\2605';}
+  /* (set number of stars due to rate)  [end]  */
+.page.projects .project-card p.project-description, 
+ .page.projects .project-card p.project-rating {
+    margin-top: 40px;
+}
 /* -------------------------------------- */
 
 /* [ MEDIA QUERIES ] */
