@@ -2,8 +2,113 @@
 /* [ FOOTER ] */
 
 footer {
-    background: var(--grey);
-    width: var(--width);
-    height: 60px;
+    background: var(--white);
+    width: 100%;
+    height: auto;
     margin: 0 auto;
+}
+footer .container { width: var(--width); margin: 0 auto; }
+footer p.heading-small {
+    font-size: 1.8em; 
+    font-weight: var(--font-bold); 
+}
+
+/* - footer: navigation - */
+footer .footer-nav .container         { height: 250px; }
+footer .footer-extra-info .container  { height: 70px; padding: 22px 0; }
+footer .footer-nav {
+    height: auto;
+}
+footer .footer-nav .container .cont {
+    --pad: 50px; 
+    
+    height: 100%;
+    width: 22%;
+    display: inline-block;
+    overflow: hidden;
+}
+/* -- footer navigation: company -- */
+footer .footer-nav .company p.text-small { line-height: 1.5em; font-size: 1.3em; }
+/* -- footer navigation: quick links & about me -- */
+footer .footer-nav .quick-links {
+    padding-left: var(--pad) !important;
+}
+footer .footer-nav .quick-links ul.links,
+ footer .footer-nav .about ul.links {
+    margin-top: 20px; 
+    list-style-type: none; 
+    padding: 0;
+}
+footer .footer-nav .quick-links ul.links li,
+ footer .footer-nav .about ul.links li {
+     line-height: 2.5em;
+}
+footer .footer-nav .quick-links ul.links a,
+ footer .footer-nav .about ul.links a {
+     color: var(--l-grey); 
+     font-size: 1.1em;
+}
+/* -- footer navigation: form -- */
+footer .footer-nav .newsletter {
+    width: 34% !important;
+}
+footer .footer-nav .newsletter form {
+    margin-top: 20px;
+}
+footer .footer-nav .newsletter form .input-wrapper {
+    --size: 45px;
+    
+    width: 100%;
+    height: var(--size); 
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, .1);
+}
+footer .footer-nav .newsletter form .input-wrapper input {
+    height: 100%;
+    display: inline-block;
+    border: none !important;
+    font-size: 1.1em;
+}
+footer .footer-nav .newsletter form .input-wrapper input:not([type = "submit"]) {
+    width: calc(100% - var(--size));
+}
+footer .footer-nav .newsletter form .input-wrapper input[type = "submit"] {
+    width: var(--size);
+    background: var(--green);
+    float: right;
+    background-image: url("../imgs/icons/airplane.png");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center;
+}
+
+/* - footer: extra information - */
+footer .footer-extra-info {
+    height: auto;
+    border-top: 2px solid rgba(0, 0, 0, .1);
+}
+footer .footer-extra-info .copyright, footer .footer-extra-info .payment-methods {
+    display: inline-block;
+    vertical-align: middle;
+}
+footer .footer-extra-info .copyright {
+    width: calc(100% - 300px);
+}
+footer .footer-extra-info .copyright p {
+    margin: 0;
+}
+footer .footer-extra-info .payment-methods {
+    width: 300px;
+    text-align: right;
+}
+footer .footer-extra-info .payment-methods p, footer .footer-extra-info .payment-methods img {
+    display: inline-block;
+}
+footer .footer-extra-info .payment-methods p {
+    margin: 0;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+footer .footer-extra-info .payment-methods img {
+    vertical-align: middle;
 }

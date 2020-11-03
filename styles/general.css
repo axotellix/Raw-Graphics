@@ -1,6 +1,12 @@
 
 /* [ GENERAL ] */
 
+/* 0. Fonts ---------------- */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 /* 1. Sections ---------------- */
 main, main section {
     width: 100%;
@@ -90,7 +96,7 @@ form * {
     outline: none;
     font-size: 1.4em;
 }
-form *:not([type = "submit"]) { padding: 10px; border: 2px solid rgba(0, 0, 0, .1); }
+form textarea, input:not([type = "submit"]) { padding: 10px; border: 2px solid rgba(0, 0, 0, .1); }
 form textarea                 { resize: none; }
 form [type = "submit"]        { cursor: pointer; }
 

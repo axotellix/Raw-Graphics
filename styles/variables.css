@@ -19,7 +19,7 @@
     --font-light: 300;
     
     /* content width */
-    --width-normal: 1200px;  /* set to 80% for adaptivity */
+    --width-normal: 80%;  /* set to 80% for adaptivity */
     --width-wide: 1500px;
     --width-narrow: 800px;
     --width-mobile: 400px;
